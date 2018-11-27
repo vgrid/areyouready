@@ -1,7 +1,7 @@
 {
   "name": "@vgrid/areyouready",
   "description": "Are You Ready module - used to signal readiness/liveliness to clusters (such as Kubernetes) via a simple HTTP server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Chris Wiggins <cwiggins@onvgrid.com>",
   "homepage": "https://github.com/vgrid/areyouready",
   "license": "GPL-3.0-or-later",
