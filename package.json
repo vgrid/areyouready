@@ -1,0 +1,57 @@
+{
+  "name": "@vgrid/areyouready",
+  "description": "Are You Ready module - used to signal readiness/liveliness to clusters (such as Kubernetes) via a simple HTTP server",
+  "version": "1.0.0",
+  "author": "Chris Wiggins <cwiggins@onvgrid.com>",
+  "homepage": "https://github.com/vgrid/areyouready",
+  "license": "GPL-3.0-or-later",
+  "main": "build/src/index.js",
+  "typings": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgrid/areyouready.git"
+  },
+  "keywords": ["kubernetes", "cluster", "health", "readiness", "liveness"],
+  "files": [
+    "build/src/*",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "coverage": "jest --coverage --env=node",
+    "lint": "tslint --project ./tsconfig.json",
+    "test": "jest --env=node"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --project ./tsconfig.json",
+      "git add"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.12.9",
+    "husky": "^0.14.3",
+    "jest": "^22.4.4",
+    "lint-staged": "^7.3.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!**/node_modules/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  }
+}

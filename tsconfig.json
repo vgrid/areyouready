@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ]
+  }
+}
