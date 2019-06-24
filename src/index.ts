@@ -30,12 +30,14 @@ export default class AreYouReady {
     this.server.listen(args.port || DEFAULT_PORT);
   }
 
-  signalLive (state: boolean): void {
+  signalLive (state: boolean): this {
     this.live = !!state;
+    return this;
   }
 
-  signalReady (state: boolean): void {
+  signalReady (state: boolean): this {
     this.ready = !!state;
+    return this;
   }
 
   /**
@@ -50,7 +52,7 @@ export default class AreYouReady {
       res.statusCode = this.live ? 200 : 500;
       return res.end(this.live ? 'OK' : 'NOT_LIVE');
     }
-    
+
     if (url.includes(this.readyUrl)) {
       res.statusCode = this.ready ? 200 : 500;
       return res.end(this.ready ? 'OK' : 'NOT_READY');

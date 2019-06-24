@@ -13,3 +13,5 @@ setTimeout(() => {
   ayr.signalReady(true);
   console.log('now ready');
 }, 4000);
+
+ayr.signalLive(false).signalReady(true);
